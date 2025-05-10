@@ -39,7 +39,7 @@ jobs:
       - name: Commit and push if data changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Automate: Update field_statuses.json
+          commit_message: "Automate: Update field_statuses.json"
           file_pattern: field_statuses.json # Only commit if this file changes
           # Optional: Add commit author and email if needed
           # commit_user_name: My GitHub Actions Bot
