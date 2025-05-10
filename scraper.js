@@ -2,13 +2,24 @@
 const axios = require('axios');
 // Import the cheerio library
 const cheerio = require('cheerio');
-// NEW: Import the 'fs' (File System) module to write files
+// Import the 'fs' (File System) module to write files
 const fs = require('fs');
-// NEW: Import the 'path' module to help with file paths
+// Import the 'path' module to help with file paths
 const path = require('path');
 
 // The URL of the field status page you want to scrape
 const url = 'https://leagues.bluesombrero.com/Default.aspx?tabid=1508807&mid=1621009&templateid=0&ctl=viewallfieldstatus';
+
+// NEW: Helper function to determine status from class string
+function determineStatus(classString) {
+    const cleanedClasses = classString.replace(/\s+/g, ' ').trim(); // Clean up whitespace
+    if (cleanedClasses.includes('fs-open') || cleanedClasses.includes('fs-dt-open')) {
+        return 'Open';
+    } else if (cleanedClasses.includes('fs-close') || cleanedClasses.includes('fs-dt-close')) {
+        return 'Closed';
+    }
+    return 'Unknown'; // Default if neither is found
+}
 
 async function fetchDataAndParse() {
     try {
@@ -21,72 +32,63 @@ async function fetchDataAndParse() {
         const $ = cheerio.load(html);
 
         const parkBlocksSelector = 'div.fs-right > div.fs-item';
-
-        // NEW: Array to hold all our structured park data
+        
         const allParksData = [];
 
         $(parkBlocksSelector).each((index, parkElement) => {
             const parkName = $(parkElement).find('h3.fs-name').text().trim();
             const parkAddress = $(parkElement).find('p.fs-address').text().trim();
-            const parkStatusClass = $(parkElement).attr('class').replace(/\s+/g, ' ').trim();
+            const parkStatusClass = $(parkElement).attr('class'); // Get the raw class string
 
-            // NEW: Object to hold data for the current park
+            // MODIFIED: Use the helper function for overall park status
+            const overallParkStatus = determineStatus(parkStatusClass);
+
             const parkData = {
                 name: parkName,
                 address: parkAddress,
-                overallStatusClasses: parkStatusClass,
-                fields: [] // Array to store field data for this park
+                overallStatus: overallParkStatus, // Store human-readable status
+              // overallStatusClasses: parkStatusClass.replace(/\s+/g, ' ').trim(), // Optionally keep raw classes if needed
+                fields: [] 
             };
 
             const individualFieldSelector = 'div.fs-detail > div[class*="fs-dt-"]';
 
             $(parkElement).find(individualFieldSelector).each((fieldIndex, fieldElement) => {
                 const fieldName = $(fieldElement).find('h4.fs-dt-head').text().trim();
-                const fieldStatusClass = $(fieldElement).attr('class').replace(/\s+/g, ' ').trim();
+                const fieldStatusClass = $(fieldElement).attr('class'); // Get the raw class string
                 const fieldUpdateTime = $(fieldElement).find('p.fs-dt-time').text().trim();
                 const fieldMessage = $(fieldElement).find('p.fs-dt-message').text().trim();
 
-                // NEW: Object to hold data for the current field
+                // MODIFIED: Use the helper function for individual field status
+                const individualFieldStatus = determineStatus(fieldStatusClass);
+
                 const fieldData = {
                     name: fieldName,
-                    statusClasses: fieldStatusClass,
+                    status: individualFieldStatus, // Store human-readable status
+                  // statusClasses: fieldStatusClass.replace(/\s+/g, ' ').trim(), // Optionally keep raw classes
                     updateTime: fieldUpdateTime
                 };
                 if (fieldMessage) {
                     fieldData.message = fieldMessage;
                 }
-
-                // NEW: Add the current field's data to the park's fields array
                 parkData.fields.push(fieldData);
             });
-
-            // NEW: Add the current park's data (with all its fields) to the main array
             allParksData.push(parkData);
         });
 
-        // NEW: Convert the allParksData array to a JSON string
-        // The 'null, 2' part makes the JSON output nicely formatted (indented by 2 spaces)
         const jsonData = JSON.stringify(allParksData, null, 2);
-
-        // NEW: Define the path where the JSON file will be saved
-        // path.join ensures the path is correct for your operating system
-        // __dirname is a Node.js global variable that gives the directory of the current script
         const outputPath = path.join(__dirname, 'field_statuses.json');
-
-        // NEW: Write the JSON data to the file
         fs.writeFileSync(outputPath, jsonData);
         console.log(`\nData successfully scraped and saved to: ${outputPath}`);
 
-
     } catch (error) {
-        console.error('Error during fetching, parsing, or saving:', error.message); // MODIFIED error message
+        console.error('Error during fetching, parsing, or saving:', error.message);
         if (error.response) {
             console.error('Status:', error.response.status);
             console.error('Headers:', error.response.headers);
         } else if (error.request) {
             console.error('No response received for the request.');
         } else {
-            // For errors not related to HTTP response (e.g., file system errors)
             console.error('Error details:', error);
         }
     }
