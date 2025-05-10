@@ -2,61 +2,61 @@
   {
     "name": "Wills Park",
     "address": "1755 Old Milton Parkway  Alpharetta Georgia United States 30009",
-    "overallStatusClasses": "fs-item fs-close",
+    "overallStatus": "Closed",
     "fields": [
       {
         "name": "Wills Park - Batting Pavilion",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 1",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 2",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 3",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 4",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 5",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 6",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 7",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field 8",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field T1",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Wills Park - Field T2",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       }
     ]
@@ -64,26 +64,26 @@
   {
     "name": "Webb Bridge Park",
     "address": "4780 Webb Bridge Rd  Alpharetta Georgia United States 30005",
-    "overallStatusClasses": "fs-item fs-close",
+    "overallStatus": "Closed",
     "fields": [
       {
         "name": "Webb Bridge Park - Field B",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Webb Bridge Park - Field A",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Webb Bridge Park - Field C",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       },
       {
         "name": "Webb Bridge Park - Field D",
-        "statusClasses": "fs-dt-close",
+        "status": "Closed",
         "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
       }
     ]
