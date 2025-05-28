@@ -3,62 +3,62 @@
     "name": "Wills Park",
     "address": "1755 Old Milton Parkway  Alpharetta Georgia United States 30009",
     "source": "Alpharetta Youth Baseball (Blue Sombrero)",
-    "overallStatus": "Closed",
+    "overallStatus": "Unknown",
     "fields": [
       {
         "name": "Wills Park - Batting Pavilion",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 1",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 2",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 3",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 4",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 5",
         "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 6",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 7",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field 8",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Wills Park - Field T1",
         "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "updateTime": "(Last updated 05/28/25 at 02:59 PM )"
       },
       {
         "name": "Wills Park - Field T2",
         "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "updateTime": "(Last updated 05/28/25 at 02:59 PM )"
       }
     ]
   },
@@ -70,23 +70,23 @@
     "fields": [
       {
         "name": "Webb Bridge Park - Field B",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Webb Bridge Park - Field A",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Webb Bridge Park - Field C",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       },
       {
         "name": "Webb Bridge Park - Field D",
-        "status": "Closed",
-        "updateTime": "(Last updated 05/10/25 at 08:12 AM )"
+        "status": "Open",
+        "updateTime": "(Last updated 05/28/25 at 02:58 PM )"
       }
     ]
   },
