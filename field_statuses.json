@@ -12,23 +12,23 @@
       },
       {
         "name": "Wills Park - Field 1",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Wills Park - Field 2",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Wills Park - Field 3",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Wills Park - Field 4",
         "status": "Open",
-        "updateTime": "(Last updated 10/27/25 at 04:27 PM )"
+        "updateTime": "(Last updated 10/29/25 at 01:21 PM )"
       },
       {
         "name": "Wills Park - Field 5",
@@ -37,18 +37,18 @@
       },
       {
         "name": "Wills Park - Field 6",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Wills Park - Field 7",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Wills Park - Field 8",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Wills Park - Field T1",
@@ -57,8 +57,8 @@
       },
       {
         "name": "Wills Park - Field T2",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       }
     ]
   },
@@ -66,27 +66,27 @@
     "name": "Webb Bridge Park",
     "address": "4780 Webb Bridge Rd  Alpharetta Georgia United States 30005",
     "source": "Alpharetta Youth Baseball (Blue Sombrero)",
-    "overallStatus": "Open",
+    "overallStatus": "Closed",
     "fields": [
       {
         "name": "Webb Bridge Park - Field B",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Webb Bridge Park - Field A",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Webb Bridge Park - Field C",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       },
       {
         "name": "Webb Bridge Park - Field D",
-        "status": "Open",
-        "updateTime": "(Last updated 10/28/25 at 03:13 PM )"
+        "status": "Closed",
+        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
       }
     ]
   },
