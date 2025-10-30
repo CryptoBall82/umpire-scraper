@@ -94,56 +94,56 @@
     "name": "Ocee Park",
     "address": "10900 Buice Rd, Johns Creek, GA 30022",
     "source": "OceePark.com",
-    "overallStatus": "Closed",
+    "overallStatus": "Open",
     "fields": [
       {
         "name": "OP - Conklin",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - Field #1",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - Field #2",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - Field #3",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - Field #4",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - Field #5",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - Jacobs",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - Lang",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - LF #2",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       },
       {
         "name": "OP - RF #2",
-        "status": "Closed",
+        "status": "Open",
         "updateTime": "N/A"
       }
     ]
