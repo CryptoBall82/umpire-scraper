@@ -3,7 +3,7 @@
     "name": "Wills Park",
     "address": "1755 Old Milton Parkway  Alpharetta Georgia United States 30009",
     "source": "Alpharetta Youth Baseball (Blue Sombrero)",
-    "overallStatus": "Unknown",
+    "overallStatus": "Open",
     "fields": [
       {
         "name": "Wills Park - Batting Pavilion",
@@ -12,18 +12,18 @@
       },
       {
         "name": "Wills Park - Field 1",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field 2",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field 3",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field 4",
@@ -32,33 +32,33 @@
       },
       {
         "name": "Wills Park - Field 5",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/27/25 at 12:50 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field 6",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field 7",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field 8",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field T1",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/27/25 at 12:50 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Wills Park - Field T2",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       }
     ]
   },
@@ -66,27 +66,27 @@
     "name": "Webb Bridge Park",
     "address": "4780 Webb Bridge Rd  Alpharetta Georgia United States 30005",
     "source": "Alpharetta Youth Baseball (Blue Sombrero)",
-    "overallStatus": "Closed",
+    "overallStatus": "Open",
     "fields": [
       {
         "name": "Webb Bridge Park - Field B",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Webb Bridge Park - Field A",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Webb Bridge Park - Field C",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       },
       {
         "name": "Webb Bridge Park - Field D",
-        "status": "Closed",
-        "updateTime": "(Last updated 10/29/25 at 01:19 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 10/31/25 at 08:58 PM )"
       }
     ]
   },
