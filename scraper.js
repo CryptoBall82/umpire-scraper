@@ -24,6 +24,17 @@ function determineBlueSombreroStatus(classString) {
     return 'Unknown';
 }
 
+// Helper function to determine status from Ocee Park status text
+function determineOceeStatus(statusText) {
+    const lowerText = statusText.toLowerCase();
+    if (lowerText.includes('open')) {
+        return 'Open';
+    } else if (lowerText.includes('closed') || lowerText.includes('close')) {
+        return 'Closed';
+    }
+    return 'Unknown';
+}
+
 // --- FUNCTION: Scrape Alpharetta Park (Blue Sombrero) Data ---
 async function scrapeAlpharettaData() {
     console.log(`Workspaceing Alpharetta data from: ${alpharettaUrl}`);
@@ -81,56 +92,45 @@ async function scrapeOceeParkData() {
     console.log('Successfully fetched Ocee Park HTML!');
     const $ = cheerio.load(html);
 
-    const oceeParkFields = [];
-    const fieldItemSelector = 'ul.rrItemsList li.rrItem'; 
-
-    $(fieldItemSelector).each((index, itemElement) => {
-        const fieldName = $(itemElement).find('span.rsConditionLocation').text().trim();
-        const fieldStatusText = $(itemElement).find('span.rsConditionStatus').text().trim().toUpperCase();
-        const fieldUpdateTime = $(itemElement).find('span.rsConditionUpdatedDate').text().trim();
-
-        if (fieldName && fieldStatusText) {
-            let mappedStatus = 'Unknown'; 
-            if (fieldStatusText === 'OPEN') {
-                mappedStatus = 'Open';
-            } else if (fieldStatusText === 'CLOSED' || fieldStatusText.includes('CLOSE')) {
-                mappedStatus = 'Closed';
-            }
-            // Add more specific mappings if Ocee Park uses other status terms
-
-            const fieldData = {
-                name: fieldName,
-                status: mappedStatus, 
-                updateTime: fieldUpdateTime || "N/A"
-            };
-            oceeParkFields.push(fieldData);
-        }
-    });
+    // Look for the Field Status section in the sidebar
+    const statusSpan = $('span.sidebarTitlesN:contains("Field Status")');
     
-    console.log(`Found ${oceeParkFields.length} fields for Ocee Park.`);
-
-    // Derive overallStatus for Ocee Park
-    let derivedOverallStatus = 'Unknown';
-    if (oceeParkFields.length > 0) {
-        if (oceeParkFields.every(field => field.status === 'Open')) {
-            derivedOverallStatus = 'Open';
-        } else {
-            derivedOverallStatus = 'Closed'; // If any field is not 'Open' (i.e., Closed or Unknown), mark park as 'Closed'
-        }
+    if (statusSpan.length === 0) {
+        console.log('Field Status section not found on Ocee Park page.');
+        return [];
     }
 
-    // Only return Ocee Park data if fields were found or a definitive status could be set (even if unknown for fields but park status is explicitly known from elsewhere)
-    // For now, we require fields to be found to create the park entry.
-    if (oceeParkFields.length > 0) {
-        return [{ // Return as an array of parks, containing one park object for Ocee
-            name: "Ocee Park",
-            address: "10900 Buice Rd, Johns Creek, GA 30022", // You can update this address if needed
-            source: "OceePark.com",
-            overallStatus: derivedOverallStatus,
-            fields: oceeParkFields
-        }];
+    // Get the status message from the list-group-item span
+    const statusMessageElement = statusSpan.closest('div.rightSideBarNav').find('span.list-group-item');
+    const statusMessage = statusMessageElement.text().trim();
+
+    if (!statusMessage) {
+        console.log('No status message found in Field Status section.');
+        return [];
     }
-    return []; // Return empty array if no fields found
+
+    console.log(`Ocee Park status message: "${statusMessage}"`);
+
+    // Parse the status message to determine overall status
+    const overallStatus = determineOceeStatus(statusMessage);
+
+    // Create a single field entry for Ocee Park with the overall status
+    const oceeParkData = {
+        name: "Ocee Park",
+        address: "10900 Buice Rd, Johns Creek, GA 30022",
+        source: "OceePark.com",
+        overallStatus: overallStatus,
+        fields: [
+            {
+                name: "Ocee Park - All Fields",
+                status: overallStatus,
+                updateTime: new Date().toLocaleString()
+            }
+        ]
+    };
+
+    console.log(`Found Ocee Park with status: ${overallStatus}`);
+    return [oceeParkData];
 }
 
 
