@@ -89,5 +89,18 @@
         "updateTime": "(Last updated 06/10/26 at 04:15 PM )"
       }
     ]
+  },
+  {
+    "name": "Ocee Park",
+    "address": "10900 Buice Rd, Johns Creek, GA 30022",
+    "source": "OceePark.com",
+    "overallStatus": "Open",
+    "fields": [
+      {
+        "name": "Ocee Park - All Fields",
+        "status": "Open",
+        "updateTime": "7/18/2026, 7:51:54 AM"
+      }
+    ]
   }
 ]
