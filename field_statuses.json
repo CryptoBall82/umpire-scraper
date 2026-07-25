@@ -3,22 +3,22 @@
     "name": "Wills Park",
     "address": "1755 Old Milton Parkway  Alpharetta Georgia United States 30009",
     "source": "Alpharetta Youth Baseball (Blue Sombrero)",
-    "overallStatus": "Closed",
+    "overallStatus": "Unknown",
     "fields": [
       {
         "name": "Wills Park - Batting Pavilion",
-        "status": "Closed",
-        "updateTime": "(Last updated 07/24/26 at 03:47 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 07/25/26 at 08:41 AM )"
       },
       {
         "name": "Wills Park - Field 1",
-        "status": "Closed",
-        "updateTime": "(Last updated 07/24/26 at 03:47 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 07/25/26 at 08:41 AM )"
       },
       {
         "name": "Wills Park - Field 2",
-        "status": "Closed",
-        "updateTime": "(Last updated 07/24/26 at 03:47 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 07/25/26 at 08:41 AM )"
       },
       {
         "name": "Wills Park - Field 3",
@@ -37,8 +37,8 @@
       },
       {
         "name": "Wills Park - Field 6",
-        "status": "Closed",
-        "updateTime": "(Last updated 07/24/26 at 03:47 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 07/25/26 at 08:44 AM )"
       },
       {
         "name": "Wills Park - Field 7",
@@ -57,8 +57,8 @@
       },
       {
         "name": "Wills Park - Field T2",
-        "status": "Closed",
-        "updateTime": "(Last updated 07/24/26 at 03:47 PM )"
+        "status": "Open",
+        "updateTime": "(Last updated 07/25/26 at 08:41 AM )"
       }
     ]
   },
@@ -99,7 +99,7 @@
       {
         "name": "Ocee Park - All Fields",
         "status": "Open",
-        "updateTime": "7/25/2026, 11:02:07 AM"
+        "updateTime": "7/25/2026, 12:58:52 PM"
       }
     ]
   }
