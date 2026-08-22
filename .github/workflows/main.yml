@@ -2,46 +2,52 @@ name: Scrape Field Statuses
 
 on:
   schedule:
-    # Runs every hour at the top of the hour
-    # You can adjust this cron schedule if needed
-    # For example, '*/30 * * * *' would be every 30 minutes
-    # '0 6,12,18 * * *' would be at 6 AM, 12 PM, and 6 PM UTC
     - cron: '0 * * * *'
-  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   scrape_and_commit:
-    runs-on: ubuntu-latest # Use the latest stable version of Ubuntu Linux as the runner
+    runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out your repository code
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24.x' # Use a Node.js version (e.g., 20.x, an LTS version)
+          node-version: '22.x' # Use an existing Node release
 
-      # Step 3: Install project dependencies
-      # 'npm ci' is generally recommended for CI environments as it uses package-lock.json
-      # for faster and more reliable installs than 'npm install'
       - name: Install dependencies
         run: npm ci
 
-      # Step 4: Run your scraper script
-      # This will generate/update the field_statuses.json file
       - name: Run scraper script
         run: node scraper.js
 
-      # Step 5: Commit and push the updated field_statuses.json if it changed
-      - name: Commit and push if data changed
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Automate: Update field_statuses.json"
-          file_pattern: field_statuses.json # Only commit if this file changes
-          # Optional: Add commit author and email if needed
-          # commit_user_name: My GitHub Actions Bot
-          # commit_user_email: my-github-actions-bot@example.com
-          # commit_options: '--no-verify --signoff'
+      - name: Configure git for commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push field_statuses.json if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Ensure we're on the checked-out branch and have up-to-date refs
+          git fetch origin +refs/heads/main:refs/remotes/origin/main || true
+          # Ensure we have up-to-date refs from origin
+          git fetch origin main || true
+
+          # Stage the file; if it doesn't exist or nothing changed, the script will skip push
+          git add field_statuses.json || true
+
+          # If there's nothing staged, exit without committing/pushing
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Automate: Update field_statuses.json" || true
+
+          # Push back to main (GITHUB_TOKEN provided by Actions has write access in this repo)
+          git push origin HEAD:main
