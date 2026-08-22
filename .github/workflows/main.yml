@@ -35,7 +35,8 @@ jobs:
         run: |
           # Ensure we're on the checked-out branch and have up-to-date refs
           git fetch origin +refs/heads/main:refs/remotes/origin/main || true
-          git checkout -B main origin/main
+          # Ensure we have up-to-date refs from origin
+          git fetch origin main || true
 
           # Stage the file; if it doesn't exist or nothing changed, the script will skip push
           git add field_statuses.json || true
