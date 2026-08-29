@@ -70,27 +70,23 @@
     "fields": [
       {
         "name": "Webb Bridge Park - Field A",
-        "status": "Closed",
-        "updateTime": "(Last updated 08/27/26 at 03:34 PM )",
-        "message": "Closed for maintenance/weather"
+        "status": "Open",
+        "updateTime": "(Last updated 08/29/26 at 11:27 AM )"
       },
       {
         "name": "Webb Bridge Park - Field B",
-        "status": "Closed",
-        "updateTime": "(Last updated 08/27/26 at 03:34 PM )",
-        "message": "Closed for maintenance/weather"
+        "status": "Open",
+        "updateTime": "(Last updated 08/29/26 at 11:27 AM )"
       },
       {
         "name": "Webb Bridge Park - Field C",
-        "status": "Closed",
-        "updateTime": "(Last updated 08/27/26 at 03:34 PM )",
-        "message": "Closed for maintenance/weather"
+        "status": "Open",
+        "updateTime": "(Last updated 08/29/26 at 11:27 AM )"
       },
       {
         "name": "Webb Bridge Park - Field D",
-        "status": "Closed",
-        "updateTime": "(Last updated 08/27/26 at 03:34 PM )",
-        "message": "Closed for maintenance/weather"
+        "status": "Open",
+        "updateTime": "(Last updated 08/29/26 at 11:27 AM )"
       }
     ]
   },
@@ -103,7 +99,7 @@
       {
         "name": "Ocee Park - All Fields",
         "status": "Open",
-        "updateTime": "8/29/2026, 2:46:39 PM"
+        "updateTime": "8/29/2026, 5:59:36 PM"
       }
     ]
   }
